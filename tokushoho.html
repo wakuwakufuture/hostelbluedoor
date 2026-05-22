@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>特定商取引法に基づく表記 | Hostel Blue Door</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #02A2D1;
+    --teal-dark: #003F69;
+    --teal-light: #D6EEF8;
+    --dark: #003F69;
+    --text: #0D2B40;
+    --gray: #6b7c80;
+    --off-white: #F4F9FD;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', 'Noto Sans JP', sans-serif; color: var(--text); background: var(--off-white); line-height: 1.8; }
+
+  header {
+    background: var(--dark);
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+  .logo span { font-size: 11px; font-weight: 400; opacity: 0.7; letter-spacing: 1px; }
+  .back-btn {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 13px;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.2s;
+  }
+  .back-btn:hover { color: white; border-color: white; }
+  .back-btn {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 13px;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.2s;
+  }
+  .back-btn:hover { color: white; border-color: white; }
+
+  .page-title {
+    background: linear-gradient(135deg, var(--teal-dark), var(--teal));
+    color: white;
+    text-align: center;
+    padding: 48px 40px;
+  }
+  .page-title h1 { font-size: 26px; font-weight: 700; margin-bottom: 6px; }
+  .page-title p { font-size: 16px; opacity: 0.85; }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 48px 24px;
+  }
+
+  .info-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+    margin-bottom: 32px;
+  }
+  .info-table tr { border-bottom: 1px solid #eef2f3; }
+  .info-table tr:last-child { border-bottom: none; }
+  .info-table td { padding: 16px 24px; font-size: 14px; vertical-align: top; }
+  .info-table td:first-child {
+    font-weight: 700;
+    color: var(--dark);
+    background: #f5fafb;
+    width: 200px;
+    border-right: 1px solid #eef2f3;
+    white-space: nowrap;
+  }
+  .info-table td:last-child { color: var(--text); line-height: 1.8; }
+  .info-table a { color: var(--teal); text-decoration: none; }
+
+  .section-block {
+    background: white;
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+    margin-bottom: 24px;
+  }
+  .section-block h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--teal-light);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-block h2::before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 18px;
+    background: var(--teal);
+    border-radius: 2px;
+  }
+  .section-block p, .section-block li { font-size: 14px; color: var(--text); line-height: 1.8; margin-bottom: 8px; }
+  .section-block ul { padding-left: 20px; }
+  .section-block strong { color: var(--dark); }
+
+  .cancel-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+  .cancel-table th {
+    background: var(--teal);
+    color: white;
+    padding: 10px 16px;
+    font-size: 13px;
+    text-align: left;
+  }
+  .cancel-table td { padding: 10px 16px; font-size: 13px; border-bottom: 1px solid #eef2f3; }
+  .cancel-table tr:last-child td { border-bottom: none; }
+
+  .home-btn {
+    display: block;
+    text-align: center;
+    background: var(--teal);
+    color: white;
+    padding: 14px 36px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    margin: 40px auto 0;
+    max-width: 240px;
+    transition: background 0.2s;
+  }
+  .home-btn:hover { background: var(--teal-dark); }
+
+  footer {
+    text-align: center;
+    padding: 24px;
+    font-size: 12px;
+    color: var(--gray);
+    border-top: 1px solid #e0ecee;
+    margin-top: 40px;
+  }
+
+  @media (max-width: 600px) {
+    .info-table td:first-child { width: 130px; font-size: 12px; padding: 12px 14px; white-space: normal; }
+    .info-table td:last-child { font-size: 13px; padding: 12px 14px; }
+    header { padding: 16px 20px; }
+    .container { padding: 32px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    Hostel Blue Door
+    <span>ホステル ブルー ドア</span>
+  </a>
+  <a href="index.html" class="back-btn">← ウェブサイトに戻る</a>
+</header>
+
+<div class="page-title">
+  <h1>Specified Commercial Transactions Act</h1>
+  <p>特定商取引法に基づく表記</p>
+</div>
+
+<div class="container">
+
+  <table class="info-table">
+    <tr>
+      <td>販売業者<br><small style="font-weight:400;color:#888">Seller</small></td>
+      <td>WAKU WAKU FUTURE LLC</td>
+    </tr>
+    <tr>
+      <td>運営統括責任者<br><small style="font-weight:400;color:#888">Representative</small></td>
+      <td>代表社員　ウォング　ニングワイー</td>
+    </tr>
+    <tr>
+      <td>所在地<br><small style="font-weight:400;color:#888">Address</small></td>
+      <td>〒453-0821 愛知県名古屋市中村区大宮町1丁目8-1<br>1-8-1 Omiyacho, Nakamura-ku, Nagoya, Aichi 453-0821 Japan</td>
+    </tr>
+    <tr>
+      <td>電話番号<br><small style="font-weight:400;color:#888">Phone</small></td>
+      <td>052-433-8705<br><small style="color:#888">受付時間: 平日 9:00〜18:00 (Weekdays 9:00–18:00)</small></td>
+    </tr>
+    <tr>
+      <td>メールアドレス<br><small style="font-weight:400;color:#888">Email</small></td>
+      <td><a href="mailto:hostelbluedoor@gmail.com">hostelbluedoor@gmail.com</a></td>
+    </tr>
+    <tr>
+      <td>サイトURL<br><small style="font-weight:400;color:#888">Website</small></td>
+      <td><a href="https://hostelbluedoor.com/" target="_blank">https://hostelbluedoor.com/</a></td>
+    </tr>
+    <tr>
+      <td>販売価格（宿泊料金）<br><small style="font-weight:400;color:#888">Pricing</small></td>
+      <td>
+        <strong>ドミトリー（4人部屋）/ Dormitory (4-bed)</strong><br>
+        日〜木: ¥2,500〜/泊 ／ 金・土・祝前日: ¥3,000〜/泊<br><br>
+        <strong>個室（2人部屋）/ Private Room (2-person)</strong><br>
+        日〜木: ¥6,000〜/泊 ／ 金・土・祝前日: ¥7,000〜/泊<br><br>
+        <small style="color:#888">全て日本円（税込）での表示となります。/ All prices in JPY, tax included.</small>
+      </td>
+    </tr>
+  </table>
+
+  <div class="section-block">
+    <h2>商品代金以外の必要料金 / Additional Fees</h2>
+    <p><strong>消費税:</strong> 10%（表示価格は税込です）<br>Consumption tax: 10% (prices shown are tax-inclusive)</p>
+    <p><strong>現地サービス:</strong> タオルレンタルや荷物預かり等のオプションサービスは、フロントデスクの表示価格に基づきます。<br>On-site services (towel rental, luggage storage, etc.) are priced per the front desk rate sheet.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>お支払方法 / Payment Methods</h2>
+    <p><strong>クレジットカード決済 / Credit Card (Stripe):</strong><br>
+    Visa, MasterCard, American Express, JCB, Diners Club, Discover<br>
+    <small style="color:#888">Stripe経由での安全な決済となります。/ Processed securely via Stripe.</small></p>
+    <br>
+    <p><strong>現地決済 / On-site Payment:</strong><br>
+    チェックイン時の現金またはクレジットカード払い（現地払いプランの場合）。<br>
+    Cash or credit card at check-in (for pay-at-property plans).</p>
+  </div>
+
+  <div class="section-block">
+    <h2>お支払時期 / Payment Timing</h2>
+    <p><strong>クレジットカード決済:</strong> 予約完了時（事前決済プラン）、または各予約サイトの規定に基づき決済されます。<br>
+    Credit card: Charged at time of booking (prepay plans) or per OTA policy.</p>
+    <br>
+    <p><strong>現地決済:</strong> チェックイン時に全額をお支払いいただきます。<br>
+    On-site: Full amount due at check-in.</p>
+    <br>
+    <p><strong>役務または商品の引渡時期（宿泊時期）:</strong> お客様がご予約された宿泊日（チェックイン日）にサービスを提供いたします。<br>
+    Service delivery: On the reserved check-in date.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>返品・キャンセルについて / Cancellation Policy</h2>
+    <p><strong>キャンセル料: ご予約時に選択されたプランのキャンセルポリシーに基づきます。</strong><br>
+    Cancellation fees are based on the plan selected at time of booking.</p>
+    <br>
+    <table class="cancel-table">
+      <thead>
+        <tr>
+          <th>タイミング / Timing</th>
+          <th>キャンセル料 / Fee</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>宿泊日の2日前まで / Up to 2 days before</td>
+          <td>無料 / Free</td>
+        </tr>
+        <tr>
+          <td>宿泊日の前日 / 1 day before</td>
+          <td>宿泊料金の50% / 50% of room rate</td>
+        </tr>
+        <tr>
+          <td>宿泊日当日・不泊 / Same day / No-show</td>
+          <td>宿泊料金の100% / 100% of room rate</td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <p><small style="color:#888">返品について: キャンセル無料期間内に事前決済予約がキャンセルされた場合、ご利用のクレジットカード会社を通じて返金手続きが行われます。返金時期はカード会社の規定により異なります。<br>
+    Refunds: For prepaid bookings cancelled within the free cancellation period, refunds are processed via your credit card company. Timing varies by card issuer.</small></p>
+  </div>
+
+  <div class="section-block">
+    <h2>動作環境 / System Requirements</h2>
+    <p>当サイトでのご予約には、インターネット接続および一般的な最新のウェブブラウザ（Chrome, Safari, Firefox, Edge等）が必要です。<br>
+    Booking on our site requires an internet connection and an up-to-date web browser (Chrome, Safari, Firefox, Edge, etc.).</p>
+  </div>
+
+  <a href="index.html" class="home-btn">← ウェブサイトに戻る</a>
+
+</div>
+
+<footer>
+  <p>&copy; 2026 WAKU WAKU FUTURE 合同会社 / Hostel Blue Door. All rights reserved.</p>
+  <p style="margin-top:8px;">
+    <a href="index.html">ホーム</a> &nbsp;·&nbsp;
+    <a href="privacy.html">プライバシーポリシー</a> &nbsp;·&nbsp;
+    <a href="tokushoho.html">特定商取引法に基づく表記</a>
+  </p>
+</footer>
+
+</body>
+</html>

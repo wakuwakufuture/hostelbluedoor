@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>会社概要 | Hostel Blue Door</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #02A2D1;
+    --teal-dark: #003F69;
+    --teal-light: #D6EEF8;
+    --dark: #003F69;
+    --text: #0D2B40;
+    --gray: #6b7c80;
+    --off-white: #F4F9FD;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', 'Noto Sans JP', sans-serif; color: var(--text); background: var(--off-white); line-height: 1.8; }
+
+  header {
+    background: var(--dark);
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo { color: white; font-size: 18px; font-weight: 700; text-decoration: none; }
+  .logo span { display: block; font-size: 11px; font-weight: 400; opacity: 0.7; letter-spacing: 1px; }
+  .back-btn {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 13px;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.2s;
+  }
+  .back-btn:hover { color: white; border-color: white; }
+
+  .page-title {
+    background: linear-gradient(135deg, var(--teal-dark), var(--teal));
+    color: white;
+    text-align: center;
+    padding: 56px 40px;
+  }
+  .page-title h1 { font-size: 28px; font-weight: 800; margin-bottom: 6px; }
+  .page-title p { font-size: 15px; opacity: 0.85; }
+
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+
+  /* Profile table */
+  .profile-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    margin-bottom: 48px;
+  }
+  .profile-table tr {
+    border-bottom: 1px solid #eaf2f8;
+  }
+  .profile-table tr:last-child { border-bottom: none; }
+  .profile-table th {
+    width: 200px;
+    padding: 18px 24px;
+    background: var(--teal-light);
+    color: var(--dark);
+    font-weight: 700;
+    font-size: 14px;
+    text-align: left;
+    vertical-align: top;
+    white-space: nowrap;
+  }
+  .profile-table td {
+    padding: 18px 24px;
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.8;
+    vertical-align: top;
+  }
+  .profile-table td .history-item {
+    margin-bottom: 6px;
+  }
+  .profile-table td .history-item:last-child { margin-bottom: 0; }
+
+  /* History timeline */
+  .history-date {
+    font-weight: 600;
+    color: var(--teal);
+    margin-right: 8px;
+  }
+
+  /* Section divider */
+  .section-label {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--teal);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--teal-light);
+  }
+
+  /* Hostel info block */
+  .hostel-block {
+    background: white;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    margin-bottom: 48px;
+  }
+  .hostel-block h2 {
+    font-size: 18px; font-weight: 700;
+    color: var(--dark); margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--teal-light);
+  }
+  .hostel-detail {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 12px 24px;
+    font-size: 14px;
+  }
+  .hostel-detail dt { font-weight: 700; color: var(--dark); }
+  .hostel-detail dd { color: var(--text); }
+
+  footer {
+    background: var(--dark);
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 24px;
+    font-size: 13px;
+  }
+  footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
+  footer a:hover { color: white; }
+
+  @media (max-width: 600px) {
+    header { padding: 16px 20px; }
+    .profile-table th { width: 120px; font-size: 13px; padding: 14px 16px; }
+    .profile-table td { padding: 14px 16px; font-size: 13px; }
+    .hostel-detail { grid-template-columns: 1fr; gap: 4px; }
+    .hostel-detail dt { margin-top: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    Hostel Blue Door
+    <span>ホステル ブルー ドア</span>
+  </a>
+  <a href="index.html" class="back-btn">← ウェブサイトに戻る</a>
+</header>
+
+<div class="page-title">
+  <h1>会社概要</h1>
+  <p>Company Profile</p>
+</div>
+
+<div class="container">
+
+  <!-- Company Profile -->
+  <p class="section-label">運営会社 / Operating Company</p>
+  <table class="profile-table">
+    <tr>
+      <th>会社名</th>
+      <td>WAKU WAKU FUTURE 合同会社</td>
+    </tr>
+    <tr>
+      <th>英語表記</th>
+      <td>WAKU WAKU FUTURE LLC</td>
+    </tr>
+    <tr>
+      <th>代表者</th>
+      <td>代表社員　ウォング　ニングワイー</td>
+    </tr>
+    <tr>
+      <th>会社所在地</th>
+      <td>〒537-0025<br>大阪府大阪市東成区中道３丁目１０番１４号</td>
+    </tr>
+    <tr>
+      <th>資本金</th>
+      <td>800万円</td>
+    </tr>
+    <tr>
+      <th>設立</th>
+      <td>平成28年2月22日（2016年2月22日）</td>
+    </tr>
+    <tr>
+      <th>職種</th>
+      <td>宿泊業・ビジネスコンサルティング・デザイン</td>
+    </tr>
+    <tr>
+      <th>従業員数</th>
+      <td>3名</td>
+    </tr>
+    <tr>
+      <th>事業内容</th>
+      <td>宿泊施設 HOSTEL BLUE DOOR 運営</td>
+    </tr>
+    <tr>
+      <th>会社沿革</th>
+      <td>
+        <div class="history-item"><span class="history-date">平成28年2月22日</span>WAKU WAKU FUTURE 合同会社 設立</div>
+        <div class="history-item"><span class="history-date">平成28年9月1日</span>UMBRELLA HOUSE（大阪）ゲストハウス オープン</div>
+        <div class="history-item"><span class="history-date">令和3年4月1日</span>オンライン英語スクール オープン</div>
+        <div class="history-item"><span class="history-date">令和6年6月18日</span>HOSTEL BLUE DOOR（名古屋）ゲストハウス オープン</div>
+      </td>
+    </tr>
+  </table>
+
+  <!-- Hostel Info -->
+  <p class="section-label">施設情報 / Facility Information</p>
+  <div class="hostel-block">
+    <h2>HOSTEL BLUE DOOR　ホステル ブルー ドア</h2>
+    <dl class="hostel-detail">
+      <dt>施設名</dt>
+      <dd>HOSTEL BLUE DOOR（ホステル ブルー ドア）</dd>
+
+      <dt>所在地</dt>
+      <dd>〒453-0801<br>愛知県名古屋市中村区大宮町１丁目８−１</dd>
+
+      <dt>電話番号</dt>
+      <dd>052-433-8705</dd>
+
+      <dt>メール</dt>
+      <dd><a href="mailto:hostelbluedoor@gmail.com" style="color:var(--teal);">hostelbluedoor@gmail.com</a></dd>
+
+      <dt>ウェブサイト</dt>
+      <dd><a href="index.html" style="color:var(--teal);">www.hostelbluedoor.com</a></dd>
+
+      <dt>開業日</dt>
+      <dd>令和6年6月18日（2024年6月18日）</dd>
+
+      <dt>受付時間</dt>
+      <dd>10:00〜18:00（時間外チェックインは事前にご相談ください）</dd>
+
+      <dt>チェックイン</dt>
+      <dd>15:00〜20:00</dd>
+
+      <dt>チェックアウト</dt>
+      <dd>11:00まで</dd>
+
+      <dt>客室数</dt>
+      <dd>3室（ツインルーム×1、ドミトリー×2）</dd>
+
+      <dt>定員</dt>
+      <dd>最大8名</dd>
+
+      <dt>設備</dt>
+      <dd>無料Wi-Fi、共用キッチン、コインランドリー、屋上テラス、荷物保管スペース</dd>
+
+      <dt>最寄り駅</dt>
+      <dd>地下鉄桜通線 太閤通駅 4番出口より徒歩約8〜10分</dd>
+    </dl>
+  </div>
+
+</div>
+
+<footer>
+  <p>&copy; 2024 WAKU WAKU FUTURE 合同会社 / Hostel Blue Door. All rights reserved.</p>
+  <p style="margin-top:8px;">
+    <a href="index.html">ホーム</a> &nbsp;·&nbsp;
+    <a href="privacy.html">プライバシーポリシー</a> &nbsp;·&nbsp;
+    <a href="tokushoho.html">特定商取引法に基づく表記</a>
+  </p>
+</footer>
+
+</body>
+</html>

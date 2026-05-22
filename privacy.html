@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy | Hostel Blue Door</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #02A2D1;
+    --teal-dark: #003F69;
+    --teal-light: #D6EEF8;
+    --dark: #003F69;
+    --text: #0D2B40;
+    --gray: #6b7c80;
+    --off-white: #F4F9FD;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', 'Noto Sans JP', sans-serif; color: var(--text); background: var(--off-white); line-height: 1.8; }
+
+  header {
+    background: var(--dark);
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+  .logo span { font-size: 11px; font-weight: 400; opacity: 0.7; letter-spacing: 1px; }
+  .back-btn {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 13px;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.2s;
+  }
+  .back-btn:hover { color: white; border-color: white; }
+  .back-btn {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 13px;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.2s;
+  }
+  .back-btn:hover { color: white; border-color: white; }
+
+  .page-title {
+    background: linear-gradient(135deg, var(--teal-dark), var(--teal));
+    color: white;
+    text-align: center;
+    padding: 48px 40px;
+  }
+  .page-title h1 { font-size: 26px; font-weight: 700; margin-bottom: 6px; }
+  .page-title p { font-size: 14px; opacity: 0.8; }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 48px 24px;
+  }
+
+  .intro-block {
+    background: white;
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text);
+  }
+  .intro-block strong { color: var(--dark); }
+
+  .section-block {
+    background: white;
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+    margin-bottom: 24px;
+  }
+
+  .section-block h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--teal-light);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-block h2::before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 18px;
+    background: var(--teal);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  .section-block h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--teal-dark);
+    margin: 16px 0 8px;
+  }
+
+  .section-block p { font-size: 14px; color: var(--text); line-height: 1.8; margin-bottom: 10px; }
+  .section-block ul { padding-left: 20px; margin-bottom: 10px; }
+  .section-block li { font-size: 14px; color: var(--text); line-height: 1.8; margin-bottom: 4px; }
+  .section-block strong { color: var(--dark); }
+
+  .contact-box {
+    background: var(--teal-light);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 12px;
+  }
+  .contact-box p { font-size: 14px; margin-bottom: 4px; color: var(--dark); }
+  .contact-box a { color: var(--teal-dark); }
+
+  .home-btn {
+    display: block;
+    text-align: center;
+    background: var(--teal);
+    color: white;
+    padding: 14px 36px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    margin: 40px auto 0;
+    max-width: 240px;
+    transition: background 0.2s;
+  }
+  .home-btn:hover { background: var(--teal-dark); }
+
+  footer {
+    text-align: center;
+    padding: 24px;
+    font-size: 12px;
+    color: var(--gray);
+    border-top: 1px solid #e0ecee;
+    margin-top: 40px;
+  }
+
+  @media (max-width: 600px) {
+    header { padding: 16px 20px; }
+    .container { padding: 32px 16px; }
+    .section-block { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    Hostel Blue Door
+    <span>ホステル ブルー ドア</span>
+  </a>
+  <a href="index.html" class="back-btn">← ウェブサイトに戻る</a>
+</header>
+
+<div class="page-title">
+  <h1>Privacy Policy for Hostel Blue Door</h1>
+  <p>Last Updated: 2025.11.15</p>
+</div>
+
+<div class="container">
+
+  <div class="intro-block">
+    <p><strong>WAKU WAKU FUTURE LLC</strong> ("we," "us," or "our") operates <strong>Hostel Blue Door</strong> (the "Hostel"). We are committed to protecting the privacy and security of our guests and website visitors. This Privacy Policy explains what information we collect, how we use it, and the steps we take to ensure your personal data is handled safely.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>1. Information We Collect</h2>
+
+    <h3>A. Information You Provide to Us</h3>
+    <p>When you make a reservation, check in at our front desk, or contact us, we may collect:</p>
+    <ul>
+      <li><strong>Personal Identity Information:</strong> Name, date of birth, gender, and nationality.</li>
+      <li><strong>Contact Details:</strong> Email address, phone number, and home address.</li>
+      <li><strong>Identification Documents:</strong> Passport numbers and copies of identification (as required by local accommodation laws).</li>
+      <li><strong>Payment Information:</strong> Credit card details, billing address, and transaction history (processed securely through our third-party payment providers).</li>
+      <li><strong>Stay Preferences:</strong> Special requests, dietary restrictions, or arrival times.</li>
+    </ul>
+
+    <h3>B. Information Collected Automatically</h3>
+    <p>When you visit our website, we may automatically collect:</p>
+    <ul>
+      <li><strong>Device Information:</strong> IP address, browser type, and operating system.</li>
+      <li><strong>Usage Data:</strong> Pages visited, time spent on the site, and referring websites.</li>
+    </ul>
+  </div>
+
+  <div class="section-block">
+    <h2>2. How We Use Your Information</h2>
+    <p>We use the collected data for the following specific purposes:</p>
+    <ul>
+      <li><strong>Reservation Management:</strong> To process bookings, verify your identity, and manage check-ins/check-outs.</li>
+      <li><strong>Legal Compliance:</strong> To maintain guest ledgers as required by local government authorities and accommodation laws.</li>
+      <li><strong>Communication:</strong> To send booking confirmations, pre-arrival instructions (e.g., door codes), and respond to your inquiries.</li>
+      <li><strong>Payment Processing:</strong> To facilitate secure transactions for your stay and any additional services.</li>
+      <li><strong>Improvement of Services:</strong> To analyze guest feedback and website usage to improve Hostel Blue Door.</li>
+    </ul>
+  </div>
+
+  <div class="section-block">
+    <h2>3. Disclosure of Information</h2>
+    <p>We do not sell your personal information. However, we may disclose your information to the following parties under strict conditions:</p>
+
+    <h3>Third-Party Service Providers:</h3>
+    <ul>
+      <li>Booking Engines & OTAs (e.g., Booking.com, Hostelworld) to sync reservations.</li>
+      <li>Payment Processors (e.g., Stripe, PayPal) to handle financial transactions securely.</li>
+      <li>IT & Web Services: Companies that host our website or provide property management software (PMS).</li>
+      <li>Legal Authorities: Police, government agencies, or regulatory bodies, strictly when required by law (e.g., submitting guest registries).</li>
+      <li>Business Transfers: In the event that WAKU WAKU FUTURE LLC is involved in a merger, acquisition, or sale of assets, your information may be transferred as part of that business asset.</li>
+    </ul>
+  </div>
+
+  <div class="section-block">
+    <h2>4. Method of Disclosure</h2>
+    <p>When we share information with the parties listed above, we do so using the following methods:</p>
+    <ul>
+      <li><strong>Secure APIs:</strong> Transmission of booking data to channel managers and payment processors uses encrypted Application Programming Interfaces.</li>
+      <li><strong>Encrypted Email/File Transfer:</strong> Any manual transfer of data is conducted via secure, encrypted channels.</li>
+      <li><strong>Physical Submission:</strong> If required by local law, physical guest ledgers are presented directly to authorized officers in person.</li>
+    </ul>
+  </div>
+
+  <div class="section-block">
+    <h2>5. Security Practices</h2>
+    <p>We take the security of your data seriously and implement the following measures:</p>
+    <ul>
+      <li><strong>SSL Encryption:</strong> Our website uses Secure Socket Layer (SSL) technology to encrypt data transmitted between your browser and our servers.</li>
+      <li><strong>Access Control:</strong> Access to guest personal information is restricted to authorized employees of WAKU WAKU FUTURE LLC who need the information to perform their job duties.</li>
+      <li><strong>Secure Storage:</strong> Physical documents (such as registration cards) are stored in locked, secure locations. Digital data is stored on secured servers with firewalls and regular security patches.</li>
+      <li><strong>Data Minimization:</strong> We only retain your personal data for as long as is necessary to fulfill the purposes outlined in this policy or to comply with legal requirements.</li>
+    </ul>
+  </div>
+
+  <div class="section-block">
+    <h2>6. Your Rights</h2>
+    <p>Depending on your location, you may have the right to:</p>
+    <ul>
+      <li>Request access to the personal data we hold about you.</li>
+      <li>Request corrections to any inaccurate data.</li>
+      <li>Request deletion of your data (subject to legal retention requirements).</li>
+      <li>Withdraw consent for marketing communications.</li>
+    </ul>
+    <p>To exercise any of these rights, please contact us using the information below.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>7. Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
+    <div class="contact-box">
+      <p><strong>Hostel Blue Door</strong></p>
+      <p>📍 1-8-1 Omiyacho, Nakamura-ku, Nagoya, Aichi, Japan</p>
+      <p>📧 <a href="mailto:hostelbluedoor@gmail.com">hostelbluedoor@gmail.com</a></p>
+      <p>📞 052-433-8705</p>
+    </div>
+  </div>
+
+  <a href="index.html" class="home-btn">← ウェブサイトに戻る</a>
+
+</div>
+
+<footer>
+  <p>&copy; 2026 WAKU WAKU FUTURE 合同会社 / Hostel Blue Door. All rights reserved.</p>
+  <p style="margin-top:8px;">
+    <a href="index.html">ホーム</a> &nbsp;·&nbsp;
+    <a href="privacy.html">プライバシーポリシー</a> &nbsp;·&nbsp;
+    <a href="tokushoho.html">特定商取引法に基づく表記</a>
+  </p>
+</footer>
+
+</body>
+</html>
